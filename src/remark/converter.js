@@ -7,16 +7,19 @@ marked.setOptions({
   gfm: true,
   tables: true,
   breaks: false,
-
   // Without this set to true, converting something like
   // <p>*</p><p>*</p> will become <p><em></p><p></em></p>
-  pedantic: true,
-
+  pedantic: false,
   sanitize: false,
   smartLists: true,
   langPrefix: '',
   // Longer delimiters must come before shorter delimiters.
-  mathDelimiters: [['$$', '$$'], ['$', '$']]
+  mathDelimiters: [
+    ['$$', '$$'], 
+    ['\\[', '\\]'], 
+    ['\\(', '\\)'], 
+    ['$', '$']
+  ]
 });
 
 converter.convertMarkdown = function (content, links, inline) {

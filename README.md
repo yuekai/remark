@@ -17,6 +17,9 @@ Check out [this remark slideshow](http://gnab.github.com/remark) for a brief int
 
 To render your Markdown-based slideshow on the fly, checkout [Remarkise](https://gnab.github.io/remark/remarkise).
 
+This fork of remark uses [yuekai/marked#texPassThrough-0.4.0](https://github.com/yuekai/marked/tree/texPassThrough-0.4.0) to fix some math rendering issues (see [gnab/remark#336](https://github.com/gnab/remark/issues/336) and [gnab/remark#403](https://github.com/gnab/remark/issues/403)).
+
+
 ### Getting Started
 
 It takes only a few, simple steps to get up and running with remark:
