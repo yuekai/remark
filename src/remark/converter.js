@@ -14,7 +14,9 @@ marked.setOptions({
 
   sanitize: false,
   smartLists: true,
-  langPrefix: ''
+  langPrefix: '',
+  // Longer delimiters must come before shorter delimiters.
+  mathDelimiters: [['$$', '$$'], ['$', '$']]
 });
 
 converter.convertMarkdown = function (content, links, inline) {
