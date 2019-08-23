@@ -12,14 +12,7 @@ marked.setOptions({
   pedantic: false,
   sanitize: false,
   smartLists: true,
-  langPrefix: '',
-  // Longer delimiters must come before shorter delimiters.
-  mathDelimiters: [
-    ['$$', '$$'], 
-    ['\\[', '\\]'], 
-    ['\\(', '\\)'], 
-    ['$', '$']
-  ]
+  langPrefix: ''
 });
 
 converter.convertMarkdown = function (content, links, inline) {
