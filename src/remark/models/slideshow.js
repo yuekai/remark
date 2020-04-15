@@ -219,6 +219,10 @@ function createSlides (slideshowSource, options) {
       slides.byNumber[slideNumber] = [];
     }
 
+    if (options.includePresenterNotes !== undefined && !options.includePresenterNotes) {
+      slide.notes = '';
+    }
+
     slideViewModel = new Slide(slides.length, slideNumber, slide, template);
 
     if (slide.properties.name) {
@@ -230,7 +234,9 @@ function createSlides (slideshowSource, options) {
     } else {
       if (slideIsIncluded) {
         slides.push(slideViewModel);
-        slides.byNumber[slideNumber].push(slideViewModel);
+        if (slides.byNumber[slideNumber] !== undefined) {
+          slides.byNumber[slideNumber].push(slideViewModel);
+        }
       }
       if (slide.properties.name) {
         slides.byName[slide.properties.name] = slideViewModel;
